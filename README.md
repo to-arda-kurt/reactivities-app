@@ -12,9 +12,9 @@ chmod +x ./create-projects-osx.sh
 
 ```bash
 dotnet sln list
-```
 
-```bash
+returns
+
 Project(s)
 ----------
 API/API.csproj
