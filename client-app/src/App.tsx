@@ -10,22 +10,22 @@ function App() {
   useEffect(()=> {
     axios.get("http://localhost:5000/api/activities")
     .then(response => {
+      console.log(response)
       setActivities(response.data);
     })
   }, [])
 
   return (
-    <div>
-        <Header as="h2" icon='users' content="Reactivities"/>
+    <div className="App">
+      <header className="App-header">
         
-        <List>
-
+        <ul>
         {activities.map((activity: any) => (
-          <List.Item key={activity.id}>{activity.title}</List.Item>
+          <li key={activity.id}>{activity.title}</li>
         ))}
-
-        </List>
+        </ul>
         
+      </header>
     </div>
   );
 }
