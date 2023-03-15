@@ -16,16 +16,16 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <Header as="h2" icon="users" content="Reactivities"/>
         
-        <ul>
+        <List>
         {activities.map((activity: any) => (
-          <li key={activity.id}>{activity.title}</li>
+          <List.Item key={activity.id}>{activity.title}</List.Item>
         ))}
-        </ul>
+        </List>
         
-      </header>
+      
     </div>
   );
 }
